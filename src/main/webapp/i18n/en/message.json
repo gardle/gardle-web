@@ -1,0 +1,38 @@
+{
+  "message": {
+    "home": {
+      "title": "Messages",
+      "createLabel": "Create a message",
+      "createOrEditLabel": "Create or edit a message",
+      "search": "Search for messages",
+      "notFound": "No messages found",
+      "noThreads": "So far you have not exchanged any messages. You can contact the respective owner in the garden field view",
+      "me": "Me"
+    },
+    "popup": {
+      "title": "New message to",
+      "cancel": "Cancel",
+      "send": "Send",
+      "success": "Message sent successfully!",
+      "error": "Message could not be sent",
+      "error401": "Please log in to send messages"
+    },
+    "notification": {
+      "newMessage": "Unread message (s) from",
+      "markMessageRead": "Mark as read"
+    },
+    "created": "Message created with ID {{param}}",
+    "updated": "Message updated with ID {{param}}",
+    "deleted": "Message deleted with ID {{param}}",
+    "delete": {
+      "question": "Are you sure you want to permanently delete message {{id}}?"
+    },
+    "detail": {
+      "title": "Message"
+    },
+    "content": "Content",
+    "time": "Time",
+    "type": "Type",
+    "leasing": "Leasing"
+  }
+}

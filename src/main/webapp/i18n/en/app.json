@@ -1,0 +1,11 @@
+{
+  "app": {
+    "navigation": {
+      "account": "Account",
+      "logout": "Logout",
+      "language": "Language",
+      "signIn": "Login",
+      "signUp": "Sign Up"
+    }
+  }
+}

@@ -1,0 +1,122 @@
+image: jhipster/jhipster:v6.1.2
+
+#Caching maven and node_modules per branch
+#https://docs.gitlab.com/ee/ci/caching/#caching-nodejs-dependencies
+cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+        - .maven/
+        - node_modules/
+
+stages:
+    - build
+    - test
+    - package
+    - deploy
+
+before_script:
+    - export NG_CLI_ANALYTICS="false"
+    - export MAVEN_USER_HOME=`pwd`/.maven
+    - mkdir -p "$HOME/.m2"
+    - cp "$MAVEN_MASTER_PASSWORD" "$HOME/.m2/settings-security.xml"
+    - cp "$MAVEN_SETTINGS" "$HOME/.m2/settings.xml"
+    - ./mvnw com.github.eirslett:frontend-maven-plugin:install-node-and-npm -DnodeVersion=v10.16.0 -DnpmVersion=6.9.0 -Dmaven.repo.local=$MAVEN_USER_HOME
+    - ./mvnw com.github.eirslett:frontend-maven-plugin:npm -Dmaven.repo.local=$MAVEN_USER_HOME
+
+# Compile
+maven-compile:
+    stage: build
+    script:
+        - ./mvnw compile -Dmaven.repo.local=$MAVEN_USER_HOME
+    artifacts:
+        paths:
+            - target/classes/
+            - target/generated-sources/
+        expire_in: 1 day
+    retry:
+        max: 2
+        when:
+            - stuck_or_timeout_failure
+    only:
+        - merge_requests
+        - master
+        - development
+        - triggers
+        - schedules
+
+# Run maven tests
+maven-test:
+    stage: test
+    script:
+        - ./mvnw verify -Dmaven.repo.local=$MAVEN_USER_HOME
+    artifacts:
+        reports:
+            junit: target/test-results/**/TEST-*.xml
+        paths:
+            - target/test-results
+            - target/jacoco
+        expire_in: 14 day
+    only:
+        - merge_requests
+        - master
+        - development
+        - triggers
+        - schedules
+
+# Run frontend tests (npm run test)
+frontend-test:
+    stage: test
+    script:
+        - ./mvnw com.github.eirslett:frontend-maven-plugin:npm -Dfrontend.npm.arguments='run test' -Dmaven.repo.local=$MAVEN_USER_HOME
+    artifacts:
+        reports:
+            junit: target/test-results/TESTS-results-jest.xml
+        paths:
+            - target/test-results
+            - target/jacoco
+        expire_in: 14 day
+    only:
+        - merge_requests
+        - master
+        - development
+        - triggers
+        - schedules
+
+# Package everything
+maven-package:
+    dependencies:
+        - frontend-test
+        - maven-test
+    stage: package
+    script:
+        - ./mvnw verify package -Pprod -DskipTests -Dmaven.repo.local=$MAVEN_USER_HOME
+    artifacts:
+        when: on_success
+        paths:
+            - target/*.jar
+            - target/classes
+        expire_in: 1 day
+    rules:
+        - if: '$CI_COMMIT_REF_NAME == "master" && $CI_PIPELINE_SOURCE == "push"' #always package on master
+          when: on_success
+        - if: '$CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "master"' #always package on MR to master
+          when: on_success
+        - if: '$CI_MERGE_REQUEST_TARGET_BRANCH_NAME =~ /^(development)|(.*release.*)$/' #allow manual package if mr to dev or release
+          when: manual
+        - when: never
+    allow_failure: true #this is needed because for some reason this is not set to true even though manuel jobs should that have set to true
+
+# Push the docker image to docker hub
+docker-push:
+    stage: deploy
+    dependencies:
+        - maven-package
+    script:
+        - ./mvnw -Pprod jib:build -Dmaven.repo.local=$MAVEN_USER_HOME
+    rules:
+        - if: '$CI_COMMIT_REF_NAME == "master" && $CI_PIPELINE_SOURCE == "push"' # autodeploy on master commit not mr events
+          when: on_success
+        - if: '$CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "master"' # merge_requests to master
+          when: manual
+        - when: never
+    allow_failure: true #this is needed because for some reason this is not set to true even though manuel jobs should that have set to true

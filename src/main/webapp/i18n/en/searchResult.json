@@ -1,0 +1,19 @@
+{
+  "searchResult": {
+    "searchResults": "Search results",
+    "gardenFieldList": {
+      "item": {
+        "title": "Title",
+        "description": "Description",
+        "city": "City",
+        "price": "Price (in € per month):",
+        "pricePerMonth": "Price per month: {0} €",
+        "size": "{0} m&sup2; large"
+      }
+    },
+    "notification": {
+      "noResult": "No matching fields found"
+    },
+    "noResultsText": "Unfortunately we could not find any suitable listings for your query."
+  }
+}

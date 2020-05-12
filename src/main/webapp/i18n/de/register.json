@@ -1,0 +1,73 @@
+{
+  "register": {
+    "title": "Jetzt <span class=\"green--text font-weight-bold\">gardle</span> beitreten!",
+    "subtitle": "Registrieren Sie ein Konto um Gartenbeete zu mieten und vermieten.",
+    "disclaimer": "Wir weisen darauf hin, dass dieser Service aktuell nur in <span class=\"font-weight-medium\">Österreich</span> zur Verfügung steht.",
+    "form": {
+      "heading": {
+        "baseInfo": "Basisinformationen",
+        "password": "Passwort erstellen",
+        "legal": "Rechtliches",
+        "bankData": "Bank Daten"
+      },
+      "label": {
+        "firstname": "Vorname",
+        "lastname": "Nachname",
+        "email": "Email",
+        "username": "Benutzername",
+        "tel": "Telefon",
+        "birthdate": "Geburtsdatum",
+        "password": "Passwort",
+        "passwordConfirm": "@:register.form.label.password wiederholen",
+        "iban": "IBAN"
+      },
+      "button": {
+        "hasAccount": "Ich habe bereits einen Account",
+        "register": "Registrieren"
+      },
+      "acceptGTC": "Ich habe die AGBs gelesen und akzeptiere diese.<br>Außerdem nehme ich zur Kenntnis, dass dieser Service nur in Österreich zur Verfügung steht."
+    },
+    "messages": {
+      "validation": {
+        "firstname": {
+          "required": "Der Vorname wird benötigt"
+        },
+        "lastname": {
+          "required": "Der Nachname wird benötigt"
+        },
+        "email": {
+          "required": "Die Email wird benötigt",
+          "email": "Bitte geben Sie eine korrekte Email-Adresse an"
+        },
+        "username": {
+          "required": "Ihr Benutzername wird benötigt",
+          "maxLength": "Ihr Benutzername darf nicht länger als {0} Zeichen sein",
+          "username": "Der @:register.form.label.username darf nur Buchstaben, Zahlen und @&nbsp;. oder _ beinhalten."
+        },
+        "tel": {
+          "required": "Die Telefonnummer wird benötigt",
+          "numeric": "Die Telefonnummer muss eine Nummer sein",
+          "invalidTel": "Keine gültige Telefonnummer"
+        },
+        "birthdate": {
+          "required": "Das Geburtsdatum wird benötigt",
+          "isOlderThan": "Sie müssen mindestens {0} Jahre alt sein"
+        },
+        "password": {
+          "required": "Das Passwort wird benötigt",
+          "minLength": "Das Passwort muss mindestens {0} Zeichen lang sein"
+        },
+        "passwordConfirm": {
+          "required": "Bitte wiederholen Sie das Passwort",
+          "sameAs": "Die Passwörter stimmen nicht überein"
+        },
+        "gtcAccept": {
+          "needsAccept": "Bitte stimmen Sie den AGBs zu"
+        },
+        "iban": {
+          "required": "Der IBAN wird benötigt"
+        }
+      }
+    }
+  }
+}

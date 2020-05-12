@@ -1,0 +1,27 @@
+{
+  "login": {
+    "title": "Anmeldung",
+    "form": {
+      "label": {
+        "username": "Benutzername",
+        "password": "Passwort"
+      },
+      "button": {
+        "reset": "Zurücksetzen",
+        "login": "Anmelden"
+      }
+    },
+    "messages": {
+      "validation": {
+        "username": {
+          "required": "Der @:login.form.label.username ist erforderlich",
+          "username": "Der @:login.form.label.username darf nur Buchstaben, Zahlen und @&nbsp;. oder _ beinhalten"
+        },
+        "password": {
+          "required": "Das @:login.form.label.password ist erforderlich"
+        }
+      },
+      "success": "Anmeldung erfolgreich"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "leasing": {
+    "title": "Buchungen",
+    "messages": {
+      "created": "Buchung vom {0} bis {1} <br> wurde angefragt.",
+      "noActiveLeasings": "Sie haben aktuell keine Buchungen. <br> Um Gartenfelder zu buchen können Sie einfach unsere Suche verwenden um ein passendes Inserat zu finden."
+    },
+    "detail": {
+      "title": "Buchungsdetails",
+      "period": "Zeitraum",
+      "duration": "Dauer",
+      "area": "Fläche",
+      "pricePerDay": "Preis pro Tag",
+      "priceTotal": "Preis gesamt",
+      "action": {
+        "moreDetails": "Mehr Details zum Feld"
+      }
+    },
+    "period": "Zeitraum",
+    "price": "Preis",
+    "fromUser": "Von",
+    "from": "Von",
+    "to": "Bis",
+    "leasingRequests": {
+      "title": "Buchungsanfragen",
+      "actions": {
+        "accept": "Akzeptieren",
+        "reject": "Ablehnen",
+        "clickHereForAll": "Klicken Sie hier für alle @:leasing.leasingRequests.title"
+      },
+      "messages": {
+        "noOpenRequests": "Aktuell haben Sie keine @:leasing.leasingRequests.title",
+        "moreOpenRequests": "Sie haben mehr als 5 offene @:(leasing.leasingRequests.title). {action}"
+      }
+    },
+    "activeLeasings": {
+      "title": "Laufende Buchungen",
+      "messages": {
+        "noActiveLeasers": "Heute haben Sie keine laufenden Buchungen"
+      }
+    },
+    "item": {
+      "bookingFor": "Buchung für",
+      "ongoing": "Läuft gerade",
+      "period": {
+        "future": "startet in {0}",
+        "current": "begann vor {0}",
+        "past": "endete vor {0}"
+      },
+      "action": {
+        "details": "Details",
+        "cancel": "Kündigen"
+      }
+    },
+    "status": {
+      "OPEN": "OFFEN",
+      "RESERVED": "RESERVIERT",
+      "REJECTED": "ABGELEHNT",
+      "CANCELLED": "GEKÜNDIGT"
+    }
+  }
+}

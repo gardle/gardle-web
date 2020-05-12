@@ -1,0 +1,109 @@
+{
+  "listing": {
+    "title": "Listings",
+    "create": {
+      "title": "Create a listing",
+      "form": {
+        "button": {
+          "submit": "Create a listing"
+        }
+      },
+      "messages": {
+        "entityCreateSuccess": "Garden field successfully created.",
+        "entityCreateSuccessWithImages": "@:Listing.create.messages.entityCreateSuccess <br> Uploading images ..."
+      }
+    },
+    "update": {
+      "title": "Edit listing",
+      "form": {
+        "button": {
+          "update": "Update listing"
+        }
+      },
+      "messages": {
+        "entityUpdateSuccess": "Garden field successfully updated.",
+        "entityUpdateSuccessWithImages": "@: Listing.update.messages.entityUpdateSuccess <br> Uploading images ..."
+      }
+    },
+    "item": {
+      "pricePerMonth": "{0} € per month",
+      "action": {
+        "details": "Details",
+        "edit": "Edit",
+        "delete": "Delete"
+      },
+      "leasing": {
+        "updateStatus": "Update status",
+        "title": "Bookings for this field",
+        "noResults": "No results"
+      }
+    },
+    "common": {
+      "form": {
+        "label": {
+          "name": "Name",
+          "description": "Description",
+          "sizeSqm": "Size",
+          "priceSqm": "Price",
+          "roofed": "Indoor",
+          "glassHouse": "Glass house",
+          "high": "Elevated",
+          "water": "Water supply",
+          "electricity": "Power supply",
+          "phValue": "PH value",
+          "address": "Address"
+        },
+        "hint": {
+          "pricePerMonth": "= {0} € per month",
+          "priceTotal": "total price {0} €"
+        },
+        "heading": {
+          "features": "Features",
+          "images": "Add pictures"
+        },
+        "button": {
+          "reset": "Reset",
+          "book": "Book"
+        }
+      },
+      "messages": {
+        "imageUploadSuccess": "Uploaded images. <br> Listing completed.",
+        "imageUploadError": "Upload failed. <br> Please try again.",
+        "imageDeleteSuccess": "Image deleted.",
+        "imageDeleteError": "Couldn't delete image.",
+        "addressCouldNotBeFoundError": "Address could not be loaded correctly",
+        "listingDoesNotExistError": "The listing does not seem to exist with us. <br> Please contact our support.",
+        "validation": {
+          "name": {
+            "required": "You have to give your listing a name",
+            "minLength": "The name must be at least {0} characters long",
+            "maxLength": "The name must be shorter than {0} characters"
+          },
+          "description": {
+            "maxLength": "The description must be shorter than {0} characters"
+          },
+          "sizeInM2": {
+            "required": "Please enter a size",
+            "minValue": "The size must be at least {0} m²"
+          },
+          "pricePerM2": {
+            "required": "Please enter a price",
+            "minValue": "The price must be at least {0} €"
+          },
+          "phValue": {
+            "minValue": "The pH value must not be less than {0}",
+            "maxValue": "The pH value must not be greater than {0}"
+          },
+          "listingAddress": {
+            "required": "Please also provide an address"
+          }
+        },
+        "verificationNeeded": {
+          "title": "Account verification needed",
+          "description": "To be able to create listings on <strong>gardle</strong> you have to verify, that we are able to make payouts to your bank account",
+          "action": "Verify account"
+        }
+      }
+    }
+  }
+}

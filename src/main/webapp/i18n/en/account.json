@@ -1,0 +1,16 @@
+{
+  "account": {
+    "events": {
+      "verification": {
+        "success": {
+          "title": "Account verified successfully",
+          "description": "You can now create listings and rent out your garden fields.<br> You are redirected to your personal listings in <strong>3 seconds</strong>."
+        },
+        "error": {
+          "title": "Account verification failed",
+          "description": "Sadly your account could not get verified. For further information on this issue please contact our support team."
+        }
+      }
+    }
+  }
+}

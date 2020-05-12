@@ -1,0 +1,14 @@
+{
+  "payment": {
+    "events": {
+      "success": {
+        "title": "Payment successfully noted",
+        "description": "The payment got marked covered at the payment provider.<br> As soon as the landlord accepts the request, the money will be disbursed. If you cancel the booking the payment will not be executed."
+      },
+      "error": {
+        "title": "Error while checkout",
+        "description": "It seems as if there were problems when checking out. If you cancelled the payment, you can ignore this message. <br> Otherwise please contact our Support."
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "logout": {
+    "messages": {
+      "success": "Logout successful"
+    }
+  }
+}

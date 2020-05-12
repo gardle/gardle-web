@@ -1,0 +1,51 @@
+enum LeasingStatus {
+	OPEN,
+	RESERVED,
+	REJECTED,
+	CLOSED
+}
+
+enum MessageType {
+	DEFAULT
+}
+
+entity Leasing{
+	id Long,
+    from Instant,
+    to Instant,
+    status LeasingStatus
+}
+
+entity Payment {
+	id Long,
+	amount Double,
+    time Instant
+}
+
+entity Message {
+	id Long,
+    content String,
+    time Instant,
+    type MessageType
+}
+
+relationship OneToMany {
+	Leasing to Payment
+}
+
+relationship ManyToMany {
+	Leasing to Message
+}
+
+// Use Data Transfert Objects (DTO)
+dto * with mapstruct
+
+paginate * with pagination
+
+// Set service options to all except few
+service * with serviceImpl
+
+filter *
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

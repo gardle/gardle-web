@@ -1,0 +1,6 @@
+{
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "description": "Leider konnte die angeforderte Seite ({0}) nicht gefunden werden."
+  }
+}

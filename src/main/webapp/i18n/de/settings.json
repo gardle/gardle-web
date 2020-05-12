@@ -1,0 +1,84 @@
+{
+  "settings": {
+    "title": "Einstellungen",
+    "form": {
+      "firstname": "Vorname",
+      "firstname.placeholder": "Ihr Vorname",
+      "lastname": "Nachname",
+      "lastname.placeholder": "Ihr Nachname",
+      "language": "Sprache",
+      "selectedLanguage": "Ausgewählte Sprache",
+      "email": "Email-Adresse",
+      "login": "Username",
+      "birthDate": "Geburtsdatum",
+      "tel": "Telefonnummer",
+      "saveButton": "Speichern",
+      "password": "Passwort",
+      "changePassword": "Passwort ändern",
+      "changePasswordButton": "Passwort ändern",
+      "currentPassword": "Aktuelles Passwort",
+      "newPassword": "Neues Passwort",
+      "repeatPassword": "Passwort Wiederholen",
+      "personalData": "Persönliche Daten"
+    },
+    "notifications": {
+      "passwordChanged": "Passwort wurde geändert",
+      "errorSavingAccountData": "Fehler beim Speichern",
+      "accountUpdated": "Account aktualisiert",
+      "errorChangingPassword": "Passwort konnte nicht geändert werden",
+      "errorFetchingData": "Fehler beim Laden der Daten"
+    },
+    "messages": {
+      "error": {
+        "fail": "<strong>Es ist ein Fehler aufgetreten!</strong> Die Einstellungen konnten nicht gespeichert werden.",
+        "emailexists": "<strong>Email wird bereits verwendet!</strong> Bitte wählen Sie eine andere aus."
+      },
+      "success": "<strong>Einstellungen wurden gespeichert!</strong>",
+      "validation": {
+        "firstname": {
+          "required": "Ihr Vorname wird benötigt.",
+          "minLength": "Ihr Vorname muss mindestens 1 Zeichen lang sein",
+          "maxLength": "Ihr Vorname darf nicht länger als 50 Zeichen sein"
+        },
+        "lastname": {
+          "required": "Ihr Nachname wird benötigt.",
+          "minLength": "Ihr Nachname muss mindestens 1 Zeichen lang sein",
+          "maxLength": "Ihr Nachname darf nicht länger als 50 Zeichen sein"
+        },
+        "email": {
+          "required": "Die Email wird benötigt",
+          "email": "Bitte geben Sie eine korrekte Email-Adresse an",
+          "minLength": "Die Email muss mindestens {0} Zeichen lang sein",
+          "maxLength": "Die Email darf max {0} Zeichen lang sein"
+        },
+        "tel": {
+          "required": "Die Telefonnummer wird benötigt",
+          "numeric": "Die Telefonnummer muss eine Nummer sein",
+          "invalidTel": "Keine gültige Telefonnummer"
+        },
+        "birthDate": {
+          "required": "Das Geburtsdatum wird benötigt",
+          "isOlderThan": "Sie müssen mindestens {0} Jahre alt sein"
+        },
+        "login": {
+          "required": "Ihr Benutzername wird benötigt",
+          "maxLength": "Ihr Benutzername darf nicht länger als {0} Zeichen sein",
+          "username": "Der @:settings.form.login darf nur Buchstaben, Zahlen und . oder _ beinhalten."
+        },
+        "currentPassword": {
+          "required": "Das aktuelle Passwort wird benötigt",
+          "minLength": "Das Passwort muss mindestens {0} Zeichen lang sein"
+        },
+        "newPassword": {
+          "required": "Das neue Passwort wird benötigt",
+          "minLength": "Das Passwort muss mindestens {0} Zeichen lang sein"
+        },
+        "repeatPassword": {
+          "required": "Bitte wiederholen Sie das Passwort",
+          "sameAs": "Die Passwörter stimmen nicht überein",
+          "minLength": "Das Passwort muss mindestens {0} Zeichen lang sein"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "leasing": {
+    "title": "Bookings",
+    "messages": {
+      "created": "Booking from {0} to {1} <br> got requested.",
+      "noActiveLeasings": "You currently don't have any bookings. <br> In order to book garden fields you can simply use our search to find suitable listings."
+    },
+    "detail": {
+      "title": "Booking details",
+      "period": "Period",
+      "duration": "Duration",
+      "area": "Area",
+      "pricePerDay": "Price per day",
+      "priceTotal": "Price total",
+      "action": {
+        "moreDetails": "More details"
+      }
+    },
+    "period": "Period",
+    "price": "Price",
+    "fromUser": "From",
+    "from": "From",
+    "to": "To",
+    "leasingRequests": {
+      "title": "Booking requests",
+      "actions": {
+        "accept": "Accept",
+        "reject": "Decline",
+        "clickHereForAll": "Click here to view all @:leasing.leasingRequests.title"
+      },
+      "messages": {
+        "noOpenRequests": "Currently you don't have any @:leasing.leasingRequests.title",
+        "moreOpenRequests": "You have more than 5 open @:(leasing.leasingRequests.title). {action}"
+      }
+    },
+    "activeLeasings": {
+      "title": "Ongoing bookings",
+      "messages": {
+        "noActiveLeasers": "Today you don't have any ongoing bookings."
+      }
+    },
+    "item": {
+      "bookingFor": "Booking for",
+      "ongoing": "Ongoing",
+      "period": {
+        "future": "starts in {0}",
+        "current": "since {0}",
+        "past": "ended before {0}"
+      },
+      "action": {
+        "details": "Details",
+        "cancel": "Cancel"
+      }
+    },
+    "status": {
+      "OPEN": "OPEN",
+      "RESERVED": "RESERVED",
+      "REJECTED": "REJECTED",
+      "CANCELLED": "CANCELLED"
+    }
+  }
+}

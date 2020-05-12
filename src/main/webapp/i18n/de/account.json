@@ -1,0 +1,16 @@
+{
+  "account": {
+    "events": {
+      "verification": {
+        "success": {
+          "title": "Konto erfolgreich verifiziert",
+          "description": "Sie können jetzt Inserate erstellen und Ihre Grünflächen vermieten.<br> Sie werden in <strong>3 Sekunden</strong> zu ihrer persönlichen Inseratsseite weitergeleitet."
+        },
+        "error": {
+          "title": "Konto Verifizierung fehlgeschlagen",
+          "description": "Ihr Konto konnte leider nicht verifiziert werden. Für genauere Auskünfte kontaktieren Sie bitte unser Support Team."
+        }
+      }
+    }
+  }
+}

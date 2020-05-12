@@ -1,0 +1,14 @@
+{
+  "payment": {
+    "events": {
+      "success": {
+        "title": "Zahlung erfolgreich vorgemerkt",
+        "description": "Die Zahlung ist nun bei unserem Zahlungsanbieter als gedeckt hinterlegt. <br>Wenn der Vermieter des Felds Ihre Anfrage annimmt wird das Geld ausgezahlt. Wenn Sie die Buchung abbrechen wird die Zahlung nicht durchgeführt."
+      },
+      "error": {
+        "title": "Fehler Beim Zahlen",
+        "description": "Es scheint als ob es Probleme mit der Zahlung gegeben hat. Falls Sie die Zahlung abgebrochen haben, können Sie diese Meldung ignorieren. <br> Ansonsten melden Sie sich bitte bei unserem Support."
+      }
+    }
+  }
+}

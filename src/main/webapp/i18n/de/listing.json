@@ -1,0 +1,109 @@
+{
+  "listing": {
+    "title": "Inserate",
+    "create": {
+      "title": "Inserat erstellen",
+      "form": {
+        "button": {
+          "submit": "Inserat erstellen"
+        }
+      },
+      "messages": {
+        "entityCreateSuccess": "Gartenfeld erfolgreich erstellt.",
+        "entityCreateSuccessWithImages": "@:listing.create.messages.entityCreateSuccess <br> Bilder werden hochgeladen..."
+      }
+    },
+    "update": {
+      "title": "Inserat bearbeiten",
+      "form": {
+        "button": {
+          "update": "Inserat aktualisieren"
+        }
+      },
+      "messages": {
+        "entityUpdateSuccess": "Gartenfeld erfolgreich aktualisiert.",
+        "entityUpdateSuccessWithImages": "@:listing.update.messages.entityUpdateSuccess <br> Bilder werden hochgeladen..."
+      }
+    },
+    "item": {
+      "pricePerMonth": "{0} € pro Monat",
+      "action": {
+        "details": "Details",
+        "edit": "Bearbeiten",
+        "delete": "Löschen"
+      },
+      "leasing": {
+        "updateStatus": "Status aktualisieren",
+        "title": "Buchungen für dieses Feld",
+        "noResults": "Keine Ergebnisse"
+      }
+    },
+    "common": {
+      "form": {
+        "label": {
+          "name": "Name",
+          "description": "Beschreibung",
+          "sizeSqm": "Größe",
+          "priceSqm": "Preis",
+          "roofed": "Überdacht",
+          "glassHouse": "Glashaus",
+          "high": "Erhöht",
+          "water": "Wasserversorgung",
+          "electricity": "Stromversorgung",
+          "phValue": "PH-Wert",
+          "address": "Adresse"
+        },
+        "hint": {
+          "pricePerMonth": "= {0} € pro Monat",
+          "priceTotal": "Gesamtpreis {0} €"
+        },
+        "heading": {
+          "features": "Attribute",
+          "images": "Bilder hinzufügen"
+        },
+        "button": {
+          "reset": "Zurücksetzen",
+          "book": "Buchen"
+        }
+      },
+      "messages": {
+        "imageUploadSuccess": "Bilder hochgeladen. <br> Inserat fertiggestellt.",
+        "imageUploadError": "Fehler beim Hochladen. <br> Bitte versuchen Sie es erneut.",
+        "imageDeleteSuccess": "Bild gelöscht.",
+        "imageDeleteError": "Bild konnte nicht gelöscht werden.",
+        "addressCouldNotBeFoundError": "Addresse konnte nicht korrekt geladen werden",
+        "listingDoesNotExistError": "Das Inserat scheint bei uns nicht zu existieren. <br> Bitte kontaktieren Sie unseren Support.",
+        "validation": {
+          "name": {
+            "required": "Sie müssen Ihrem Inserat einen Namen geben",
+            "minLength": "Der Name muss mindestens {0} Zeichen lang sein",
+            "maxLength": "Der Name muss kürzer als {0} Zeichen sein"
+          },
+          "description": {
+            "maxLength": "Die Beschreibung muss kürzer als {0} Zeichen sein"
+          },
+          "sizeInM2": {
+            "required": "Bitte geben Sie eine Größe an",
+            "minValue": "Die Größe muss mindestens {0} m² betragen"
+          },
+          "pricePerM2": {
+            "required": "Bitte geben Sie einen Preis an",
+            "minValue": "Der Preis muss mindestens {0} € sein"
+          },
+          "phValue": {
+            "minValue": "Der PH-Wert darf nicht kleiner als {0} sein",
+            "maxValue": "Der PH-Wert darf nicht größer als {0} sein"
+          },
+          "listingAddress": {
+            "required": "Bitte geben Sie auch eine Adresse an"
+          }
+        },
+        "verificationNeeded": {
+          "title": "Account Verifizierung notwendig",
+          "description": "Um Inserate auf <strong>gardle</strong> zu stellen, müssen Sie verifizieren, dass wir Ihnen Ihr Geld auszahlen können",
+          "action": "Account verifizieren"
+        }
+      }
+    }
+  }
+}

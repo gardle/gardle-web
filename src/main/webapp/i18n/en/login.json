@@ -1,0 +1,27 @@
+{
+  "login": {
+    "title": "Log In",
+    "form": {
+      "label": {
+        "username": "Username",
+        "password": "Password"
+      },
+      "button": {
+        "reset": "Reset",
+        "login": "Log In"
+      }
+    },
+    "messages": {
+      "validation": {
+        "username": {
+          "required": "The @:login.form.label.username is required",
+          "username": "The @:login.form.label.username may only contain letters, numbers and @&nbsp;. or _"
+        },
+        "password": {
+          "required": "The @:login.form.label.password is required"
+        }
+      },
+      "success": "Log in Successful"
+    }
+  }
+}

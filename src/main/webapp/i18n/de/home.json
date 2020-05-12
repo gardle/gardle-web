@@ -1,0 +1,29 @@
+{
+  "home": {
+    "search": {
+      "explore": "Suche in allen Feldern",
+      "orSearch": "Oder suche nach Deinen Kriterien",
+      "noData": "Leider konnten wir zu diesem Suchbegriff nichts finden. <br> Du kannst aber gerne trotzdem suchen."
+    },
+    "description": {
+      "takeSentence": "Nimm dir deinen eigenen Teil",
+      "nature": "Natur",
+      "lessee0": "Mit Gardle kannst du an der größten land-sharing Gemeinschaft der Welt teilnehmen. Entdecke deine Verbindung mit der Natur wieder - in ein paar einfachen Schritten:",
+      "lessee1": "Durchsuche tausende Felder, von Usern genau wie du, und finde das perfekte Stück.",
+      "lessee2": "Erstelle dir ein Konto bei uns.",
+      "lessee3": "Reserviere ein Feld in einer Zeitspanne nach deinen Bedürfnissen und bezahle auf unsere Webseite.",
+      "lessee4": "Geh zu deinem neuen Feld und pflanze dir etwas wunderschönes.",
+      "renter0": "Dabei kannst du sogar Geld verdienen:",
+      "renter1": "Erstelle dir ein Konto bei uns.",
+      "renter2": "Füge deine Bankverbindung hinzu.",
+      "renter3": "Beschreibe das Feld, das du vermieten willst. Mache es bemerkbar.",
+      "renter4": "Nimm einkommende Angebote an und genieße deine Gardle Mitgliedschaft.",
+      "share": {
+        "or": "... oder teile",
+        "it": "sie",
+        "withOthers": "mit anderen"
+      }
+    },
+    "howTo": "Erfahre mehr über <strong>gardle</strong>"
+  }
+}

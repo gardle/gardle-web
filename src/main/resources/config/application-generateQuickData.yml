@@ -1,0 +1,4 @@
+spring:
+  jpa:
+    properties:
+      hibernate.jdbc.batch_size: 50

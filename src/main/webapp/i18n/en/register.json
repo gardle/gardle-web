@@ -1,0 +1,73 @@
+{
+  "register": {
+    "title": "<span class=\"green--text font-weight-bold\">Join gardle</span> now!",
+    "subtitle": "Register an account to rent and rent out garden beds.",
+    "disclaimer": "We would like to point out that this service is currently only available in <span class=\"font-weight-medium\">Austria</span> .",
+    "form": {
+      "heading": {
+        "baseInfo": "Basic information",
+        "password": "Create a password",
+        "legal": "Legal",
+        "bankData": "Bank Data"
+      },
+      "label": {
+        "firstname": "First name",
+        "lastname": "Surname",
+        "email": "E-mail",
+        "username": "Username",
+        "tel": "Phone",
+        "birthdate": "Date of birth",
+        "password": "Password",
+        "passwordConfirm": "Repeat @:register.form.label.password",
+        "iban": "IBAN"
+      },
+      "button": {
+        "hasAccount": "I already have an account",
+        "register": "Sign up"
+      },
+      "acceptGTC": "I have read the terms and conditions and accept them. <br> I also note that this service is only available in Austria."
+    },
+    "messages": {
+      "validation": {
+        "firstname": {
+          "required": "The first name is required"
+        },
+        "lastname": {
+          "required": "The surname is required"
+        },
+        "email": {
+          "required": "The email is required",
+          "email": "Please enter a correct email address"
+        },
+        "username": {
+          "required": "Your username is required",
+          "maxLength": "Your username cannot be longer than {0} characters",
+          "username": "The @:register.form.label.username may only contain letters, numbers and @&nbsp;. or _"
+        },
+        "tel": {
+          "required": "The phone number is required",
+          "numeric": "The phone number must be a number",
+          "invalidTel": "Not a valid phone number"
+        },
+        "birthdate": {
+          "required": "The date of birth is required",
+          "isOlderThan": "You must be at least {0} years old"
+        },
+        "password": {
+          "required": "The password is required",
+          "minLength": "The password must be at least {0} characters long"
+        },
+        "passwordConfirm": {
+          "required": "Please repeat the password",
+          "sameAs": "The passwords do not match"
+        },
+        "gtcAccept": {
+          "needsAccept": "Please agree to the terms and conditions"
+        },
+        "iban": {
+          "required": "IBAN is necessary"
+        }
+      }
+    }
+  }
+}

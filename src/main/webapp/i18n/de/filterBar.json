@@ -1,0 +1,46 @@
+{
+  "filterBar": {
+    "navigationDrawerAppend": {
+      "button": {
+        "handleFilterUpdate": "Filtern"
+      }
+    },
+    "searchKeywords": "Suche",
+    "location": {
+      "locationField": "Standort",
+      "locationRadius": "Wie weit von dem Standort entfernt?",
+      "myLocation": "Meinen Standort verwenden"
+    },
+    "leasingTime": {
+      "calendarLabel": "Leasing Zeitraum"
+    },
+    "price": "Preis (in € pro m<sup>2</sup>/Tag)",
+    "size": "Größe (in m<sup>2</sup>)",
+    "roofed": "Überdacht",
+    "electricity": "Stromzufuhr",
+    "high": "Hochbeet",
+    "glassHouse": "Glashaus",
+    "water": "Wasserzufuhr",
+    "actions": {
+      "resetFilters": "Filter zurücksetzen",
+      "updateFilters": "Filtern"
+    },
+    "messages": {
+      "validation": {
+        "leasingTime": {
+          "validMinMaxDateParameter": "Von Datum muss vor Bis Datum liegen"
+        },
+        "price": {
+          "validMinMaxNumericParameter": "Minimaler Preis muss kleiner sein als die maximaler Preis"
+        },
+        "size": {
+          "validMinMaxNumericParameter": "Minimale Größe muss kleiner sein als die maximale Größe"
+        }
+      },
+      "error": {
+        "addressCouldNotBeFoundError": "Addresse konnte nicht gefunden werden",
+        "locationNotFound": "Standort konnte nicht gefunden werden"
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "home": {
+    "search": {
+      "explore": "Search in all fields",
+      "orSearch": "Or search for your criteria",
+      "noData": "Unfortunately we could not find anything for this search term. <br> But you can search anyway."
+    },
+    "description": {
+      "takeSentence": "Take your own part of",
+      "nature": "nature",
+      "lessee0": "Take part in the worlds largest land-sharing community with Gardle. Rediscover your connection to nature - only with a few steps:",
+      "lessee1": "Explore thousands of fields, from users just like you, and find the perfect one for you.",
+      "lessee2": "Create your own Gardle account.",
+      "lessee3": "Book a field for any time that fits for you and pay on our website.",
+      "lessee4": "Go to your new field and plant something beautiful",
+      "renter0": "You can also earn money in just a few steps:",
+      "renter1": "Create your own Gardle account",
+      "renter2": "Add your bank information",
+      "renter3": "Describe the field you want to lease, so that other users can find it.",
+      "renter4": "Accept incoming requests and enjoy your Gardle membership.",
+      "share": {
+        "or": "... or share",
+        "it": "it",
+        "withOthers": "with others"
+      }
+    },
+    "howTo": "Find out more about <strong>gardle</strong>"
+  }
+}

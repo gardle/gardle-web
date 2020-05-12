@@ -1,0 +1,48 @@
+{
+  "message": {
+    "home": {
+      "title": "Nachrichten",
+      "createLabel": "Nachricht erstellen",
+      "createOrEditLabel": "Nachricht erstellen oder bearbeiten",
+      "search": "Suche nach Nachrichten",
+      "notFound": "Keine Nachrichten gefunden",
+      "noThreads": "Bisher haben Sie keine Nachrichten getauscht. Sie können im Feldansicht den jeweiligen Besitzer kontaktieren",
+      "me": "Ich"
+    },
+    "system": {
+      "leasingOpen": "Reservierungsanfrage für das Feld {fieldName} erstellt von {firstName} {lastName}",
+      "leasingCancelled": "Eine Reservierungsanfrage für das Feld {fieldName} von {firstName} {lastName} wurde widerrufen",
+      "leasingReserved": "Die Reservierungsanfrage für das Feld {fieldName} wurde vom Besitzer akzeptiert",
+      "leasingRejected": "Die Reservierungsanfrage für das Feld {fieldName} wurde vom Besitzer abgelehnt"
+    },
+    "popup": {
+      "title": "Neue Nachricht an",
+      "cancel": "Abbrechen",
+      "send": "Schicken",
+      "success": "Nachricht erfolgreich geschickt!",
+      "error": "Nachricht konnte nicht geschickt werden",
+      "error401": "Bitte melden Sie sich an um Nachrichten zu senden"
+    },
+    "notification": {
+      "newMessage": "Ungelesene Nachricht(en) von",
+      "markMessageRead": "als gelesen markieren",
+      "leasingOpen": "Neue offene Reservierungsanfrage für das Feld {fieldName}",
+      "leasingCancelled": "Eine Reservierungsanfrage für das Feld {fieldName} von {firstName} {lastName} wurde widerrufen",
+      "leasingReserved": "Ihre Reservierungsanfrage für das Feld {fieldName} wurde vom Besitzer akzeptiert",
+      "leasingRejected": "Ihre Reservierungsanfrage für das Feld {fieldName} wurde vom Besitzer abgelehnt"
+    },
+    "created": "Nachricht erstellt mit ID {{ param }}",
+    "updated": "Nachricht aktualisiert mit ID {{ param }}",
+    "deleted": "Nachricht gelöscht mit ID {{ param }}",
+    "delete": {
+      "question": "Soll Nachricht {{ id }} wirklich dauerhaft gelöscht werden?"
+    },
+    "detail": {
+      "title": "Nachricht"
+    },
+    "content": "Inhalt",
+    "time": "Zeit",
+    "type": "Typ",
+    "leasing": "Leasing"
+  }
+}

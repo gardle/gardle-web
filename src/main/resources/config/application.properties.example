@@ -1,0 +1,33 @@
+###
+# An example config, values should be changed in order for the application to run
+# The file can be copied to `application-{profile}.properties`
+###
+
+# Mailing
+spring.mail.host=
+spring.mail.port=
+spring.mail.username=
+spring.mail.password=
+
+# JWT Generation
+jhipster.security.authentication.jwt.base64-secret=
+
+# DB Access
+spring.datasource.url=
+spring.datasource.username=
+spring.datasource.password=
+
+# SSL
+# only needed in production (profile 'prod' or 'tls')
+server.ssl.key-store-password=
+
+# Stripe integration
+stripe.public-key=
+stripe.private-key=
+stripe.leasing-webhook-secret=
+stripe.account-webhook-secret=
+# The hook URLs can be kept
+stripe.payment-success-url="http://localhost:9060/payment/success"
+stripe.payment-cancel-url="http://localhost:9060/payment/error"
+stripe.account-success-url="http://localhost:9060/account/verification/success"
+stripe.account-failure-url="http://localhost:9060/account/verification/error"

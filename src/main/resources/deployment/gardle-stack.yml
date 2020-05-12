@@ -1,0 +1,142 @@
+version: '3.5'
+services:
+        # NFS as a service doesn't work because cap_add is not supported by swarm mode
+        #  gardle-nfs:
+        #    image: erichough/nfs-server
+        #    ports:
+        #      - 2049
+        #    volumes:
+        #      - /gardle/images:/gardle/images
+        #      - type: tmpfs
+        #        target: /gardle/lucene
+        #    cap_add:
+        #      - SYS_ADMIN
+        #      - SYS_MODULE
+        #    environment:
+        #      - NFS_EXPORT_0='/gardle/images *(ro,no_subtree_check)'
+        #      - NFS_EXPORT_0='/gardle/lucene *(ro,no_subtree_check)'
+  gardle-app:
+    image: gardle/gardle:${TAG}
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_PROFILES_ACTIVE=prod,swagger,generateQuickData
+#      - SPRING_PROFILES_ACTIVE=prod,swagger,generateQuickData
+#      - SPRING_PROFILES_ACTIVE=prod,swagger,generateBigData
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://gardle-postgresql:5432/airgnb
+      - JHIPSTER_SLEEP=15 # gives time for other services to boot before the application
+      - JASYPT_ENCRYPTOR_PASSWORD=PASS
+    volumes:
+      - /gardle/logs:/gardle/logs
+      - /gardle/images:/gardle/images
+      - nfs-lucene:/gardle/lucene
+#           ports:
+#      - 443:443
+    deploy:
+      replicas: 3
+      endpoint_mode: dnsrr
+      restart_policy:
+       condition: any # no matter which exit code
+#       max_attempts: 3
+       window: 120s
+    depends_on:
+            #- gardle_nfs
+      - gardle-postgresql
+    networks:
+      - net
+  gardle-postgresql:
+    image: postgres:11.5
+    command: postgres -c 'max_connections=1000'
+    # volumes:
+    #     - ~/volumes/jhipster/airgnb/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=
+      - POSTGRES_PASSWORD=
+      - PG_MODE=primary
+      - PG_PRIMARY_USER=
+      - PG_PRIMARY_PASSWORD=
+      - PG_PRIMARY_PORT=5432
+    ports:
+      - '5432'
+    networks:
+      - net
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+#        max_attempts: 3
+      placement:
+        constraints:
+          - node.labels.location == ipax
+  gardle-postgresql-replica:
+    image: postgres:11.5
+    # volumes:
+    #     - ~/volumes/jhipster/airgnb/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=
+      - POSTGRES_PASSWORD=
+      - PG_MODE=replica
+      - PG_PRIMARY_HOST=gardle-postgresql
+      - PG_PRIMARY_PORT=5432
+      - PG_PRIMARY_USER=
+      - PG_PRIMARY_PASSWORD=
+    ports:
+      - '5432'
+    networks:
+      - net
+    depends_on:
+      - gardle-postgresql
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: on-failure
+#        max_attempts: 3
+      placement:
+        constraints:
+          - node.labels.location != ipax
+  gardle-loadbalancer:
+    image: haproxytech/haproxy-debian:2.0
+    networks:
+      - net
+    volumes:
+      - /etc/haproxy:/etc/haproxy
+    dns: 127.0.0.11
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+        mode: ingress
+      - target: 443
+        published: 443
+        protocol: tcp
+        mode: ingress
+      - target: 8081
+        published: 8081
+        protocol: tcp
+        mode: ingress
+    deploy:
+      replicas: 3
+      placement:
+        constraints:
+          - node.labels.location == ipax
+      restart_policy:
+        condition: on-failure
+
+networks:
+ net:
+  driver: overlay
+  attachable: true
+
+volumes:
+  nfs-lucene:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: nfsvers=4,addr=alex.gardle.ga,rw
+      device: ":/gardle/lucene"
+      #  nfs-images:
+      #    driver: local
+      #    driver_opts:
+      #      type: nfs
+      #      o: nfsver=4,addr=gardle-nfs,rw
+      #      device: ":/gardle/images"

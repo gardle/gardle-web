@@ -1,0 +1,19 @@
+{
+  "searchResult": {
+    "searchResults": "Suchergebnis",
+    "gardenFieldList": {
+      "item": {
+        "title": "Titel",
+        "description": "Beschreibung",
+        "city": "Stadt",
+        "price": "Preis (in € pro Monat):",
+        "pricePerMonth": "Preis pro Monat: {0} €",
+        "size": "{0}m&sup2; groß"
+      }
+    },
+    "notification": {
+      "noResult": "Keine passenden Felder gefunden"
+    },
+    "noResultsText": "Leider konnten wir zu deiner Abfrage keine passenden Inserate finden."
+  }
+}

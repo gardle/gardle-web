@@ -1,0 +1,45 @@
+{
+  "filterBar": {
+    "navigationDrawerAppend": {
+      "button": {
+        "handleFilterUpdate": "Filter"
+      }
+    },
+    "searchKeywords": "Search",
+    "location": {
+      "locationField": "Location",
+      "locationRadius": "How far from the location?"
+    },
+    "leasingTime": {
+      "calendarLabel": "Leasing period"
+    },
+    "price": "Price (in € per m²/day)",
+    "size": "Size (in m²)",
+    "roofed": "Indoor",
+    "electricity": "Power",
+    "high": "Raised bed",
+    "glassHouse": "Glass house",
+    "water": "Water supply",
+    "actions": {
+      "resetFilters": "Reset filter",
+      "updateFilters": "Filter"
+    },
+    "messages": {
+      "validation": {
+        "leasingTime": {
+          "validMinMaxDateParameter": "'From' date must be before 'To' date"
+        },
+        "price": {
+          "validMinMaxNumericParameter": "Minimum price must be less than the maximum price"
+        },
+        "size": {
+          "validMinMaxNumericParameter": "The minimum size must be smaller than the maximum size"
+        }
+      },
+      "error": {
+        "addressCouldNotBeFoundError": "Could not find address for",
+        "locationNotFound": "Could not find location"
+      }
+    }
+  }
+}

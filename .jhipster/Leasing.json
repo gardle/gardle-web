@@ -1,0 +1,43 @@
+{
+    "name": "Leasing",
+    "fields": [
+        {
+            "fieldName": "from",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "to",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "LeasingStatus",
+            "fieldValues": "OPEN,RESERVED,REJECTED,CLOSED"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "payment",
+            "otherEntityRelationshipName": "leasing",
+            "relationshipName": "payment"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "message",
+            "otherEntityRelationshipName": "leasing",
+            "relationshipName": "message",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20191022174155",
+    "entityTableName": "leasing",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

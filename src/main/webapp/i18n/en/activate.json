@@ -1,0 +1,11 @@
+{
+  "activate": {
+    "title": "Activation",
+    "messages": {
+      "noActivationKey": "To activate your account, please check your email inbox. <br> If you have not received an email, please contact our support",
+      "success": "Your account has been successfully activated, you can now use gardle :) <br> You can log in to start.",
+      "error": "We are very sorry but we could not activate your account :( <br> Please contact our support for help."
+    },
+    "loginButton": "Log In"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "app": {
+    "navigation": {
+      "account": "Konto",
+      "logout": "Abmelden",
+      "language": "Sprache",
+      "signIn": "Anmelden",
+      "signUp": "Registrieren"
+    }
+  }
+}

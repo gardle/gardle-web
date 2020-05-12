@@ -1,0 +1,84 @@
+{
+  "settings": {
+    "title": "Settings",
+    "form": {
+      "firstname": "First name",
+      "firstname.placeholder": "Your first name",
+      "lastname": "Surname",
+      "lastname.placeholder": "Your last name",
+      "language": "Language",
+      "selectedLanguage": "Selected language",
+      "email": "E-mail address",
+      "login": "Username",
+      "birthDate": "Date of birth",
+      "tel": "Phone number",
+      "saveButton": "Save",
+      "password": "Password",
+      "changePassword": "Change Password",
+      "changePasswordButton": "Change Password",
+      "currentPassword": "Current password",
+      "newPassword": "New Password",
+      "repeatPassword": "Repeat password",
+      "personalData": "Personal data"
+    },
+    "notifications": {
+      "passwordChanged": "Password was changed",
+      "errorSavingAccountData": "Error while saving",
+      "accountUpdated": "Account updated",
+      "errorChangingPassword": "Password could not be changed",
+      "errorFetchingData": "Error loading data"
+    },
+    "messages": {
+      "error": {
+        "fail": "<strong>An error has occurred!</strong> The settings could not be saved.",
+        "emailexists": "<strong>Email is already in use!</strong> Please choose another one."
+      },
+      "success": "<strong>Settings were saved!</strong>",
+      "validation": {
+        "firstname": {
+          "required": "Your first name is required.",
+          "minLength": "Your first name must be at least 1 character long",
+          "maxLength": "Your first name cannot be longer than 50 characters"
+        },
+        "lastname": {
+          "required": "Your last name is required.",
+          "minLength": "Your last name must be at least 1 character long",
+          "maxLength": "Your last name cannot be longer than 50 characters"
+        },
+        "email": {
+          "required": "The email is required",
+          "email": "Please enter a correct email address",
+          "minLength": "The email must be at least {0} characters long",
+          "maxLength": "The email may be a maximum of {0} characters long"
+        },
+        "tel": {
+          "required": "The phone number is required",
+          "numeric": "The phone number must be a number",
+          "invalidTel": "Not a valid phone number"
+        },
+        "birthDate": {
+          "required": "The date of birth is required",
+          "isOlderThan": "You must be at least {0} years old"
+        },
+        "login": {
+          "required": "Your username is required",
+          "maxLength": "Your username cannot be longer than {0} characters",
+          "username": "The @:settings.form.login may only contain letters, numbers and . or _"
+        },
+        "currentPassword": {
+          "required": "The current password is required",
+          "minLength": "The password must be at least {0} characters long"
+        },
+        "newPassword": {
+          "required": "The new password is required",
+          "minLength": "The password must be at least {0} characters long"
+        },
+        "repeatPassword": {
+          "required": "Please repeat the password",
+          "sameAs": "The passwords do not match",
+          "minLength": "The password must be at least {0} characters long"
+        }
+      }
+    }
+  }
+}

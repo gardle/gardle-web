@@ -1,0 +1,43 @@
+version: '3'
+services:
+    db:
+        image: mariadb
+        restart: always
+        volumes:
+            - ./matomo-db:/var/lib/mysql
+            - ./mysqld.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf
+        environment:
+            - MYSQL_ROOT_PASSWORD=
+            #                        - MYSQL_ROOT_HOST='%'
+        env_file:
+            - ./db.env
+
+    matomo:
+        image: matomo:fpm-alpine
+        restart: always
+        volumes:
+            - ./www:/var/www/html
+        environment:
+            - MATOMO_DATABASE_HOST=db
+        env_file:
+            - ./db.env
+        depends_on:
+            - db
+    nginx:
+        image: nginx:alpine
+        restart: always
+        volumes:
+            - ./www:/var/www/html:ro
+            - ./matomo-nginx.conf:/etc/nginx/conf.d/default.conf:ro
+            - ./certbot/conf:/etc/letsencrypt
+            - ./certbot/www:/var/www/certbot
+        ports:
+            - 443:443
+            - 80:80
+        depends_on:
+            - matomo
+    certbot:
+        image: certbot/certbot
+        volumes:
+            - ./certbot/conf:/etc/letsencrypt
+            - ./certbot/www:/var/www/certbot
