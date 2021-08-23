@@ -92,7 +92,7 @@
         <thumbnailator.version>0.4.8</thumbnailator.version>
         <stripe.version>16.2.0</stripe.version>
         <jasypt-spring-boot.version>2.1.2</jasypt-spring-boot.version>
-        <jsoup.version>1.11.2</jsoup.version>
+        <jsoup.version>1.14.2</jsoup.version>
         <commons-validator.version>1.6</commons-validator.version>
     </properties>
 
@@ -211,7 +211,7 @@
         <dependency>
             <groupId>org.jsoup</groupId>
             <artifactId>jsoup</artifactId>
-            <version>1.11.3</version>
+            <version>1.14.2</version>
         </dependency>
         <dependency>
             <groupId>net.logstash.logback</groupId>
